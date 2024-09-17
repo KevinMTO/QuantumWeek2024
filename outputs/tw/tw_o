@@ -1,0 +1,9 @@
+Original circuit simulation result:
+[[0.577+0.j 0.   +0.j 0.   +0.j 0.   +0.j 0.577+0.j 0.   +0.j 0.   +0.j
+  0.   +0.j 0.577+0.j]]
+
+Compiled circuit simulation result:
+[[ 0.577+0.j -0.   +0.j -0.   +0.j  0.   -0.j  0.577+0.j  0.   +0.j
+   0.   +0.j -0.   -0.j  0.577-0.j]]
+
+Are the simulation results close? True

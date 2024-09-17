@@ -1,0 +1,5 @@
+Number of qudits: 9
+Dimensions of qudits: [5, 5, 5, 5, 5, 5, 5, 2, 2]
+Total number of gates in the circuit: 15
+Number of quantum registers: 2
+Number of classical registers: 9

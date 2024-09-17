@@ -1,0 +1,3 @@
+Number of instructions in the circuit: 3
+Final state is: [[0.   +0.j 0.577+0.j 0.577+0.j 0.   +0.j 0.577+0.j 0.   +0.j]]
+Is the simulated state close to the expected state? True
