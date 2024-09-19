@@ -1,13 +1,12 @@
 import numpy as np
 from mqt.qudits.compiler import QuditCompiler
+from mqt.qudits.compiler.compilation_minitools.naive_unitary_verifier import phy_sdit_sim
 from mqt.qudits.quantum_circuit import QuantumCircuit
 from mqt.qudits.simulation import MQTQuditProvider
 
-
 # Create the original circuit
-circuit = QuantumCircuit(2, [3, 3], 0)
-circuit.x(0)
-circuit.csum([0, 1])
+circuit = QuantumCircuit(1, [6], 0)
+circuit.z(0)
 
 # Simulate the original circuit
 original_state = circuit.simulate()
@@ -20,11 +19,12 @@ backend_ion = provider.get_backend("faketraps2six")
 
 # Compile the circuit
 qudit_compiler = QuditCompiler()
-passes = ["LocAdaPass"]
+passes = ["LocQRPass"]  # Change it to LocAdaPass ;)
 new_circuit = qudit_compiler.compile(backend_ion, circuit, passes)
+print(f"\nNumber of gates: {len(new_circuit.instructions)}")
 
 # Simulate the compiled circuit
-compiled_state = new_circuit.simulate()
+compiled_state = phy_sdit_sim(new_circuit)
 print("\nCompiled circuit simulation result:")
 print(compiled_state.round(3))
 print()

@@ -37,7 +37,7 @@ print("Original circuit simulation result:")
 print(original_state.round(3))
 
 new_circuit0 = circuit.compileO0("faketraps2six")
-print(f"\nNUmber of gates, without any optimization: {len(new_circuit0.instructions)}")
+print(f"\nNumber of gates, without any optimization: {len(new_circuit0.instructions)}")
 
 compiled_state0 = new_circuit0.simulate()
 print("\nCompiled circuit simulation result:")
@@ -46,7 +46,7 @@ is_close_s0 = np.allclose(original_state, compiled_state0)
 print(f"\nAre the simulation results close? {is_close_s0}")
 
 new_circuit1 = circuit.compileO1("faketraps2six")
-print(f"\nNUmber of gates, with resynth optimization: {len(new_circuit1.instructions)}")
+print(f"\nNumber of gates, with resynth optimization: {len(new_circuit1.instructions)}")
 
 compiled_state1 = new_circuit1.simulate()
 print("\nCompiled circuit simulation result:")
