@@ -6,7 +6,7 @@ from mqt.qudits.simulation import MQTQuditProvider
 
 # Create the original circuit
 circuit = QuantumCircuit(1, [6], 0)
-circuit.z(0)
+circuit.h(0)
 
 # Simulate the original circuit
 original_state = circuit.simulate()
